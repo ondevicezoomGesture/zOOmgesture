@@ -33,10 +33,10 @@
   the market are not equipped with built-in depth sensor posing additional challenges. The main blocks of the algorithm are: 
   (i) hand segmentaion, (ii) stable hand detection, (iii) left/right hand detection (iv) thumb and index finger segmentation 
   (v) tracking & analysing thumb & index finger movement. First we average out similar texture region and highlight edges between different texture. Skin pixel detection followed by largest contour segmentation gives the hand region in the user's FOV. Left/Right hand detection is done by determing the slope of hand, because hand orientation will be of fix type in Google Cardboard/HMD.
-  If Left hand is detected, right most point on hand countour is extreme point of if right hand is detected, left most point on 
+  If Left hand is detected, right most point on hand countour is extreme point. Similarly, if right hand is detected, left most point on 
   hand countour is extreme point. After the left/right hand is detected, center of extreme point & centroid of contour is calculated.
-  All hand region is toward centoid of contour from center is removed. Now of the largest two blob one is thumb & other is index
-  finger. whose movement is analysed to know zoom In/Out . We conducted experiments which  demonstrates  that our method of Zoom 
+  The hand region towards centroid of contour from center is removed. Now of the largest two blob one is thumb & other is index
+  finger. The distance between fingres is analysed to classify Zoom gesture. We conducted experiments which  demonstrates  that our method of Zoom 
   Gesture, work in real time, on device in complex background. </p>
 
 <h3>
