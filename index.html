@@ -70,18 +70,14 @@ Google Cardboard.</p>
   <h4>
 <a id="Hand Segmentation" class="anchor" href="#Hnad Segmentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hand Segmentation</h4>
 
-<p><img src="https://github.com/ondevicezoomGesture/zOOmgesture/blob/master/img/flowdiagramnew.jpg?raw=true?" alt="Proposed Method " height = "600" width="550" align = "middle"></p>
+<p><img src="https://github.com/ondevicezoomGesture/zOOmgesture/blob/master/img/Our-Hand-segmentation.jpg?raw=true?" alt="Proposed Method " height = "600" width="550" align = "middle"></p>
 
-<p align="justify"> We  present an  approach  for  marker-less  and  real-time touch-less gestures for Zoom in/out on wearables in FPV by tracking
-  the movement of Thumb and Index finger. Our  approach  is  particularly  suitable  as  most  of  the smartphones available in 
-  the market are not equipped with built-in depth sensor posing additional challenges. The main blocks of the algorithm are: 
-  (i) hand segmentaion, (ii) stable hand detection, (iii) left/right hand detection (iv) thumb and index finger segmentation 
-  (v) tracking & analysing thumb & index finger movement. First we average out similar texture region and highlight edges between different texture. Skin pixel detection followed by largest contour segmentation gives the hand region in the user's FOV. Left/Right hand detection is done by determing the slope of hand, because hand orientation will be of fix type in Google Cardboard/HMD.
-  If Left hand is detected, right most point on hand countour is extreme point. Similarly, if right hand is detected, left most point on 
-  hand countour is extreme point. After the left/right hand is detected, center of extreme point & centroid of contour is calculated.
-  The hand region towards centroid of contour from center is removed. Now of the largest two blob one is thumb & other is index
-  finger. The distance between fingres is analysed to classify Zoom gesture. We conducted experiments which  demonstrates  that our method of Zoom 
-  Gesture, work in real time, on device in complex background. </p>
+<p align="justify"> The proposed zoom gesture classification depends on
+accurate hand segmentation. We design a filter for hand segmentation
+under the assumption that largest skin-colored blob in First
+Person View(FPV) is of a hand. We opted for a thresholding
+technique that is computationally inexpensive, works effi-
+ciently on-device. </p>
 
 <h4>
   
